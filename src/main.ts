@@ -7,9 +7,8 @@ import { Engine, ImportMeshAsync, Scene } from "@babylonjs/core";
 import sogPath from "../assets/pizza.sog?url";
 
 const main = async () => {
-  const renderCanvas = document.querySelector<HTMLCanvasElement>(
-    "#renderCanvas",
-  );
+  const renderCanvas =
+    document.querySelector<HTMLCanvasElement>("#renderCanvas");
   if (!renderCanvas) {
     return;
   }

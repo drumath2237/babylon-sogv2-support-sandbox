@@ -6,10 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check": "biome check ./src",
+    "check:write": "biome check --write ./src"
   },
   "devDependencies": {
     "@babylonjs/core": "^8.30.5",
+    "@biomejs/biome": "^2.2.5",
     "typescript": "^5.5.4",
     "vite": "^7.1.9"
   },
