@@ -1,10 +1,8 @@
 import "./style.css";
 
-import {
-  Engine,
-  ImportMeshAsync,
-  Scene,
-} from "@babylonjs/core";
+import "@babylonjs/loaders/SPLAT";
+
+import { Engine, ImportMeshAsync, Scene } from "@babylonjs/core";
 
 import sogPath from "../assets/pizza.sog?url";
 
@@ -20,10 +18,10 @@ const main = async () => {
   const scene = new Scene(engine);
 
   scene.createDefaultCameraOrLight(true, true, true);
-  scene.createDefaultEnvironment();
 
-  const { meshes } = await ImportMeshAsync(sogPath, scene);
-  console.log(meshes);
+  ImportMeshAsync(sogPath, scene).then(({ meshes }) => {
+    console.log(meshes);
+  });
 
   window.addEventListener("resize", () => engine.resize());
   engine.runRenderLoop(() => scene.render());
