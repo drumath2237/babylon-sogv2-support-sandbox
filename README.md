@@ -6,6 +6,8 @@
 
 Try Babylon.js' SOG v2 support.
 
+![pizza](./docs/pizza.png)
+
 ## Usage
 
 ```sh
@@ -13,3 +15,7 @@ pnpm i
 
 pnpm dev
 ```
+
+## Contact
+
+[@drumath2237](https://x.com/ninisan_drumath)
